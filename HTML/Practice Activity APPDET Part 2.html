@@ -1,0 +1,464 @@
+ 
+<!DOCTYPE html>
+ 
+<html lang="en">
+ 
+<head>
+ 
+    <meta charset="UTF-8">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Application Form</title>
+ 
+    <style>
+ 
+        body {
+ 
+            font-family: "Times New Roman", Times, serif;
+ 
+            display: flex;
+ 
+            flex-direction: column;
+ 
+            align-items: center;
+ 
+            padding-top: 20px;
+ 
+        }
+ 
+ 
+        h1 {
+ 
+            font-family: Arial, Helvetica, sans-serif;
+ 
+            font-weight: normal;
+ 
+            font-size: 32px;
+ 
+            margin-bottom: 20px;
+ 
+            color: #000;
+ 
+        }
+ 
+ 
+        form {
+ 
+            width: 400px;
+ 
+        }
+ 
+ 
+        /* Ito yung box na may gray border na bumabalot sa buong form */
+ 
+        fieldset {
+ 
+            border: 1px solid #888;
+ 
+            padding: 10px 20px;
+ 
+            border-radius: 3px;
+ 
+        }
+ 
+ 
+        legend {
+ 
+            font-size: 18px;
+ 
+            color: #000;
+ 
+            padding: 0 5px;
+ 
+        }
+ 
+ 
+        /* Gumamit ako ng TABLE layout para pantay-pantay ang alignment ng labels at inputs */
+ 
+        table.main-table {
+ 
+            width: 100%;
+ 
+            border-collapse: collapse;
+ 
+        }
+ 
+ 
+        /* Ito yung mga cells sa loob ng main table */
+ 
+        table.main-table td {
+ 
+            padding: 5px 0;
+ 
+            vertical-align: top;
+ 
+            font-size: 15px;
+ 
+            color: #333;
+ 
+        }
+ 
+ 
+        /* Inaayos ko ang lapad ng first column (Labels) para pantay lahat */
+ 
+        table.main-table td:first-child {
+ 
+            width: 30%;
+ 
+            font-weight: normal;
+ 
+        }
+ 
+ 
+        /* Design para sa mga text box at dropdown */
+ 
+        input[type="text"],
+ 
+        input[type="email"],
+ 
+        select {
+ 
+            width: 250px;
+ 
+            padding: 2px;
+ 
+            font-family: Arial, sans-serif;
+ 
+            font-size: 13px;
+ 
+            border: 1px solid #777;
+ 
+        }
+ 
+ 
+        table.inner-table {
+ 
+            width: 100%;
+ 
+            border-collapse: collapse;
+ 
+            border: none;
+ 
+        }
+ 
+ 
+        table.inner-table td {
+ 
+            border: none;
+ 
+            padding: 2px 0;
+ 
+            width: 50%;
+ 
+        }
+ 
+ 
+        /* Para sa label ng radio buttons at checkbox */
+ 
+        label {
+ 
+            margin-right: 5px;
+ 
+            font-family: Arial, sans-serif;
+ 
+            font-size: 13px;
+ 
+            display: inline-flex;
+ 
+            align-items: center; /* Para pantay ang bilog/box sa text */
+ 
+        }
+ 
+ 
+        /* Inaayos ang alignment ng checkbox at radio button mismo */
+ 
+        input[type="checkbox"], input[type="radio"] {
+ 
+            margin: 0 5px 0 0;
+ 
+            vertical-align: middle;
+ 
+        }
+ 
+ 
+        /* Yung malaking box para sa resume text */
+ 
+        textarea {
+ 
+            width: 95%;
+ 
+            height: 60px;
+ 
+            font-family: monospace;
+ 
+            resize: vertical;
+ 
+            border: 1px solid #777;
+ 
+        }
+ 
+ 
+        /* Footer section para sa Terms at Submit buttons */
+ 
+        .footer {
+ 
+            margin-top: 15px;
+ 
+            font-family: "Times New Roman", Times, serif;
+ 
+        }
+ 
+ 
+        .footer label {
+ 
+            font-family: "Times New Roman", Times, serif;
+ 
+            font-size: 15px;
+ 
+            display: block;
+ 
+            margin-bottom: 5px;
+ 
+        }
+ 
+ 
+        /* Gitna ang mga buttons sa baba */
+ 
+        .buttons {
+ 
+            text-align: center;
+ 
+            margin-top: 15px;
+ 
+        }
+ 
+ 
+        /* Design ng buttons (Submit/Reset) */
+ 
+        button {
+ 
+            padding: 2px 15px;
+ 
+            cursor: pointer;
+ 
+            font-family: Arial, sans-serif;
+ 
+            font-size: 13px;
+ 
+            background-color: #f0f0f0;
+ 
+            border: 1px solid #777;
+ 
+            margin: 0 5px;
+ 
+        }
+ 
+ 
+        .file-input-wrapper {
+ 
+            font-family: Arial, sans-serif;
+ 
+            font-size: 13px;
+ 
+        }
+ 
+    </style>
+ 
+</head>
+ 
+<body>
+ 
+    <h1>Practice Activity</h1>
+ 
+    <form>
+ 
+        <fieldset>
+ 
+            <legend>Application form</legend>
+ 
+       
+ 
+            <table class="main-table">
+ 
+                <tr>
+ 
+                    <td>Full Name</td>
+ 
+                    <td><input type="text" value=""></td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Email</td>
+ 
+                    <td><input type="email" value=""></td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Gender</td>
+ 
+                    <td>
+ 
+                        <label><input type="radio" name="gender" value="male" checked> Male</label>
+ 
+                        <label><input type="radio" name="gender" value="female" style="margin-left: 10px;"> 
+Female</label>
+ 
+                    </td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Nationality</td>
+ 
+                    <td>
+ 
+                        <select name="nationality">
+ 
+                            <option value="Indian">Indian</option>
+ 
+                            <option value="Chinese">Chinese</option>
+ 
+                            <option value="Filipino">Filipino</option>
+ 
+                            <option value="American">American</option>
+ 
+                            <option value="Japanese">Japanese</option>
+ 
+                            <option value="Other">Other</option>
+ 
+                        </select>
+ 
+                    </td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Skills</td>
+ 
+                    <td>
+ 
+                        <table class="inner-table">
+ 
+                            <tr>
+ 
+                                <td><label><input type="checkbox" name="skills" checked> Asp.Net</label></
+td>
+ 
+                                <td><label><input type="checkbox" name="skills" checked> jQuery</label></td>
+ 
+                            </tr>
+ 
+                            <tr>
+ 
+                                <td><label><input type="checkbox" name="skills"> MVC</label></td>
+ 
+                                <td><label><input type="checkbox" name="skills" checked> Sql Server</label></
+td>
+ 
+                            </tr>
+ 
+                        </table>
+ 
+                    </td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Post applying for</td>
+ 
+                    <td>
+ 
+                        <table class="inner-table">
+ 
+                            <tr>
+ 
+                                <td><label><input type="radio" name="post" value="trainee"> Trainee</label></
+td>
+ 
+                                <td><label><input type="radio" name="post" value="se" checked> Software 
+Engineer</label></td>
+ 
+                            </tr>
+ 
+                            <tr>
+ 
+                                <td><label><input type="radio" name="post" value="tl"> Team Leader</label></
+td>
+ 
+                                <td><label><input type="radio" name="post" value="pm"> Project manager</
+label></td>
+ 
+                            </tr>
+ 
+                        </table>
+ 
+                    </td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Upload Resume:</td>
+ 
+                    <td class="file-input-wrapper">
+ 
+                        <input type="file" name="resume">
+ 
+                    </td>
+ 
+                </tr>
+ 
+                <tr>
+ 
+                    <td>Paste your resume</td>
+ 
+                    <td>
+ 
+                        <textarea name="resume_text">Sample resume text...</textarea>
+ 
+                    </td>
+ 
+                </tr>
+ 
+            </table>
+ 
+            <div class="footer">
+ 
+                <label>
+ 
+                    <input type="checkbox" name="notify" checked> Notify me the status via Email
+ 
+                </label>
+ 
+                <label>
+ 
+                    <input type="radio" name="terms" checked> I agree to terms & conditions
+ 
+                </label>
+ 
+                <div class="buttons">
+ 
+                    <button type="submit">Submit</button>
+ 
+                    <button type="reset">Reset</button>
+ 
+                </div>
+ 
+            </div>
+ 
+        </fieldset>
+ 
+    </form>
+ 
+</body>
+ 
+</html>
+ 

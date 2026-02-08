@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Activity</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #3a3a3a; /* dark background like screenshot */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Main window container */
+        .window {
+            background: #ffffff;
+            border: 2px solid #b0b0b0;
+            width: 520px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            margin: 0 0 20px 0;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        th, td {
+            border: 1px solid #9c9c9c;
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        /* Purple header row */
+        th {
+            background: #c9c9ff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 95%;
+            padding: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            width: 98%;
+            height: 90px;
+            resize: none;
+            font-size: 14px;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            line-height: 1.6;
+        }
+
+        .submit-row {
+            text-align: center;
+            padding-top: 12px;
+            border: none;
+        }
+
+        button {
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="window">
+        <h1>Practice Activity</h1>
+
+        <table>
+            <tr>
+                <th style="width: 35%;">Name</th>
+                <th>Value</th>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sex</td>
+                <td class="radio-group">
+                    <label>
+                        <input type="radio" name="sex"> Male
+                    </label><br>
+                    <label>
+                        <input type="radio" name="sex"> Female
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Eye color</td>
+                <td>
+                    <select>
+                        <option>green</option>
+                        <option>brown</option>
+                        <option>blue</option>
+                        <option>hazel</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Check all that apply</td>
+                <td class="checkbox-group">
+                    <label>
+                        <input type="checkbox"> Over 6 feet tall
+                    </label><br>
+                    <label>
+                        <input type="checkbox"> Over 200 pounds
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Describe your athletic ability:
+                    <br><br>
+                    <textarea></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="submit-row">
+                    <button>Enter my information</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

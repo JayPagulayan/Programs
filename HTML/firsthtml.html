@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        First Website
+    </title>
+    <style>
+ 
+        body {
+ 
+            font-family: Arial, sans-serif;
+ 
+            display: flex;
+ 
+            flex-direction: column;
+ 
+            align-items: center;
+ 
+            padding-top: 20px;
+ 
+        }
+ 
+ 
+        h1 {
+ 
+            font-family: Arial, Helvetica, sans-serif;
+ 
+            font-weight: normal;
+ 
+            font-size: 32px;
+ 
+            margin-bottom: 20px;
+ 
+            color: #000;
+ 
+        }
+ 
+ 
+        /* Ginamit ko po ay table layout para magaya yung grid sa picture */
+ 
+        table {
+ 
+            border: 1px solid #999;
+ 
+            border-collapse: separate;
+ 
+            border-spacing: 2px;
+ 
+            width: 400px;
+ 
+            font-size: 14px;
+ 
+        }
+ 
+ 
+        /* Ito yung design para sa "Name" at "Value" headers na kulay violet */
+ 
+        th {
+ 
+            background-color: #d0d0ff;
+ 
+            border: 1px solid #999;
+ 
+            padding: 5px;
+ 
+            font-weight: bold;
+ 
+            font-family: "Times New Roman", Times, serif;
+ 
+            font-size: 16px;
+ 
+        }
+ 
+ 
+        /* Ito yung mga cells o kahon sa loob ng table */
+ 
+        td {
+ 
+            border: 1px solid #999;
+ 
+            padding: 5px;
+ 
+            vertical-align: top;
+ 
+        }
+ 
+ 
+        /* Inaayos ko lang po lapad ng first column para di masyadong masikip */
+ 
+        td:first-child {
+ 
+            width: 40%;
+ 
+        }
+ 
+ 
+        /* Para sakto yung haba ng mga input box sa loob ng cell */
+ 
+        input[type="text"], select {
+ 
+            width: 95%;
+ 
+            box-sizing: border-box;
+ 
+        }
+ 
+ 
+        /* Para magkapatong yung mga choices sa radio button at checkbox */
+ 
+        .option-group {
+ 
+            display: flex;
+ 
+            flex-direction: column;
+ 
+            gap: 2px;
+ 
+        }
+ 
+ 
+        label {
+ 
+            display: inline-flex;
+ 
+            align-items: center;
+ 
+            gap: 5px;
+ 
+        }
+ 
+ 
+        /* Ito po yung malaking box sa baba na pwedeng sulatan ng mahaba */
+ 
+        textarea {
+ 
+            width: 98%;
+ 
+            height: 80px;
+ 
+            margin-top: 5px;
+ 
+            resize: none; /* Para di nila mabago size ng box */
+ 
+        }
+ 
+ 
+        /* Para sa row ng button sa dulo */
+ 
+        .button-row {
+ 
+            text-align: center; /* Gitna yung button */
+ 
+            background-color: #fff;
+ 
+        }
+ 
+ 
+        /* Design po ng button para magmukhang old school */
+ 
+        button {
+ 
+            padding: 2px 10px;
+ 
+            background-color: #e0e0e0;
+ 
+            border: 2px outset #ccc;
+ 
+            font-family: Arial, sans-serif;
+ 
+            font-size: 12px;
+ 
+            cursor: pointer;
+ 
+        }
+ 
+    </style>
+</head>
+<body>
+    <h1>Practice Activity</h1>
+    <div class="window">
+        
+        <form>
+            <table border="1">
+                <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Value
+                </th>
+                </tr>
+                <tr>
+                    <td>Name</td><td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td>
+                        <input name="gender" type="radio" value="Male">Male
+                        <br>
+                        <input name="gender"type="radio" value="Female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Eye Color
+                    </td>
+                    <td>
+                        <select name="eye_color">
+                          <option value="green"> green </option>
+                           <option value="red">red</option>
+                           <option value="brown">brown</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Check all that apply
+                    </td>
+                    <td>
+                        <input name="tall" type="checkbox" value="Over 6 foot tall">
+                        Over 6 foot tall 
+                        <br>
+                        <input name="heavy" type="checkbox" value="Over 200 pounds">
+                        Over 200 pounds
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Describe your athletic ability<br>
+                        <textarea name="athletic_ability"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">
+                            Enter my Information
+                        </button>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
